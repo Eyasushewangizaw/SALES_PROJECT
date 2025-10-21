@@ -11,10 +11,11 @@ Each regional user uploads their CSV sales files via a web application, which tr
 ## Data Flow
 
 User Upload (Frontend Web App):
-  “*” Each country team uploads a sales_data.csv file through a secure web interface.
+  
+  a. Each country team uploads a sales_data.csv file through a secure web interface.
 
 File Storage (Cloud Storage):
-  “*” The web app sends the uploaded file to a Google Cloud Storage bucket (raw sales data zone).
+  a. The web app sends the uploaded file to a Google Cloud Storage bucket (raw sales data zone).
 
 Automated Processing (Cloud Functions):
   “*” A Cloud Function is triggered when a new file arrives. It:
