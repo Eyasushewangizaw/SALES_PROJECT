@@ -11,22 +11,22 @@ Each regional user uploads their CSV sales files via a web application, which tr
 ## Data Flow
 
 User Upload (Frontend Web App):
-  Each country team uploads a sales_data.csv file through a secure web interface.
+  “*” Each country team uploads a sales_data.csv file through a secure web interface.
 
 File Storage (Cloud Storage):
-  The web app sends the uploaded file to a Google Cloud Storage bucket (raw sales data zone).
+  “*” The web app sends the uploaded file to a Google Cloud Storage bucket (raw sales data zone).
 
 Automated Processing (Cloud Functions):
-  A Cloud Function is triggered when a new file arrives. It:
+  “*” A Cloud Function is triggered when a new file arrives. It:
 
-    Reads the CSV file from Cloud Storage
+    “*” Reads the CSV file from Cloud Storage
 
-    Cleans and validates the data
+    “*” Cleans and validates the data
 
-    Loads it into BigQuery for centralized analytics
+   “*”  Loads it into BigQuery for centralized analytics
 
-Analytics & Reporting (BigQuery + Looker):
+“*” Analytics & Reporting (BigQuery + Looker):
 
-  BigQuery stores all cleaned sales data in one dataset.
+  “*” BigQuery stores all cleaned sales data in one dataset.
 
-  Looker (or Looker Studio) connects to BigQuery for dashboards and reports showing trends, country performance, and product analytics.
+  “*” Looker (or Looker Studio) connects to BigQuery for dashboards and reports showing trends, country performance, and product analytics.
