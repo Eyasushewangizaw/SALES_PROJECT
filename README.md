@@ -18,16 +18,16 @@ File Storage (Cloud Storage):
   a. The web app sends the uploaded file to a Google Cloud Storage bucket (raw sales data zone).
 
 Automated Processing (Cloud Functions):
-  “*” A Cloud Function is triggered when a new file arrives. It:
+  A Cloud Function is triggered when a new file arrives. It:
 
-    “*” Reads the CSV file from Cloud Storage
+     a. Reads the CSV file from Cloud Storage
 
-    “*” Cleans and validates the data
+     b. Cleans and validates the data
 
-   “*”  Loads it into BigQuery for centralized analytics
+     c. Loads it into BigQuery for centralized analytics
 
-“*” Analytics & Reporting (BigQuery + Looker):
+Analytics & Reporting (BigQuery + Looker):
 
-  “*” BigQuery stores all cleaned sales data in one dataset.
+  a. BigQuery stores all cleaned sales data in one dataset.
 
-  “*” Looker (or Looker Studio) connects to BigQuery for dashboards and reports showing trends, country performance, and product analytics.
+  b. Looker (or Looker Studio) connects to BigQuery for dashboards and reports showing trends, country performance, and product analytics.
